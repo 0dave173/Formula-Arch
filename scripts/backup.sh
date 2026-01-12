@@ -27,7 +27,3 @@ for p in "${toBackup[@]}"; do
 done
 
 echo "Backup done."
-
-chmod +x formula-arch/scripts/*.sh
-chmod +x formula-arch/scripts/ai/*.sh
-chmod +x formula-arch/scripts/ai/providers/*.sh

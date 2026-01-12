@@ -9,10 +9,9 @@ if ! command -v ollama >/dev/null 2>&1; then
   exit 1
 fi
 
+systemPrompt=""
 if [[ -n "${promptFile}" && -f "${promptFile}" ]]; then
   systemPrompt="$(cat "${promptFile}")"
-else
-  systemPrompt=""
 fi
 
 userPrompt="$(cat)"
@@ -22,5 +21,3 @@ userPrompt="$(cat)"
   echo
   echo "${userPrompt}"
 } | ollama run "${model}"
-
-chmod +x formula-arch/scripts/ai/providers/ollama.sh

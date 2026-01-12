@@ -6,7 +6,5 @@
   "modules-center": ["clock"],
   "modules-right": ["pulseaudio", "network", "battery"],
 
-  "clock": {
-    "format": "{:%a %d %b  %H:%M}"
-  }
+  "clock": { "format": "{:%a %d %b  %H:%M}" }
 }

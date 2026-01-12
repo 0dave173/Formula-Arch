@@ -17,5 +17,3 @@ case "${provider}" in
     exit 1
     ;;
 esac
-
-chmod +x formula-arch/scripts/ai/racecontrol.sh

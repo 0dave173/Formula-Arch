@@ -17,5 +17,3 @@ export FORMULAARCH_BORDER_INACTIVE="#CFC7BC"
 export FORMULAARCH_RADIUS="14"
 export FORMULAARCH_GAP="10"
 export FORMULAARCH_BORDER_SIZE="2"
-
-chmod +x formula-arch/assets/palette/palette.sh

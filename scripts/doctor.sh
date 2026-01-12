@@ -47,7 +47,3 @@ if [[ "${missing}" -eq 1 ]]; then
 fi
 
 echo "All required dependencies found."
-
-chmod +x formula-arch/scripts/*.sh
-chmod +x formula-arch/scripts/ai/*.sh
-chmod +x formula-arch/scripts/ai/providers/*.sh
