@@ -1,0 +1,42 @@
+/* ============================================================
+   Formula-Arch - GTK3
+   Custom titlebar buttons (SVG)
+============================================================ */
+
+headerbar {
+    background: rgba(236, 230, 218, 0.92);
+    color: #1E2327;
+    box-shadow: none;
+}
+
+headerbar button.titlebutton {
+    min-width: 28px;
+    min-height: 28px;
+    margin: 6px 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(30, 35, 39, 0.12);
+    box-shadow: none;
+}
+
+headerbar button.titlebutton:hover {
+    background: rgba(140, 190, 214, 0.35);
+}
+
+headerbar button.titlebutton.close {
+    background-image: url("assets/icons/window-buttons/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+headerbar button.titlebutton.minimize {
+    background-image: url("assets/icons/window-buttons/minimize.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+headerbar button.titlebutton.maximize {
+    background-image: url("assets/icons/window-buttons/maximize.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,0 +1,34 @@
+/* ============================================================
+   Formula-Arch - Waybar
+============================================================ */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Inter", "Noto Sans", sans-serif;
+    font-size: 12px;
+}
+
+window#waybar {
+    background: rgba(236, 230, 218, 0.92);
+    color: #1E2327;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    margin: 6px 4px;
+    border-radius: 999px;
+    background: transparent;
+    color: #1E2327;
+}
+
+#workspaces button.active {
+    background: rgba(140, 190, 214, 0.35);
+}
+
+#clock, #pulseaudio, #network, #battery {
+    margin: 6px 6px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.55);
+}

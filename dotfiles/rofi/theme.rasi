@@ -1,0 +1,45 @@
+/* ============================================================
+   Formula-Arch - Rofi theme
+============================================================ */
+
+* {
+  bg: #ECE6DA;
+  fg: #1E2327;
+  accent: #8CBED6;
+  muted: #8A8A8A;
+  radius: 14px;
+}
+
+window {
+  width: 640px;
+  border: 2px;
+  border-color: @accent;
+  border-radius: @radius;
+  background-color: @bg;
+}
+
+mainbox {
+  padding: 14px;
+  background-color: @bg;
+}
+
+inputbar {
+  border-radius: @radius;
+  background-color: rgba(255,255,255,0.65);
+  padding: 10px;
+  text-color: @fg;
+}
+
+listview {
+  padding: 8px 0 0 0;
+  background-color: transparent;
+}
+
+element {
+  padding: 10px;
+  border-radius: 12px;
+}
+
+element selected {
+  background-color: rgba(140,190,214,0.35);
+}

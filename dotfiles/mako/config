@@ -1,0 +1,12 @@
+# ============================================================
+# Formula-Arch - Mako
+# ============================================================
+
+background-color=#ECE6DAE6
+text-color=#1E2327FF
+border-color=#8CBED6FF
+border-size=2
+padding=12
+margin=12
+border-radius=14
+default-timeout=4500
