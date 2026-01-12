@@ -1,6 +1,2 @@
-configuration {
-  show-icons: true;
-  modi: "drun,run";
-  font: "Inter 12";
-}
+configuration { show-icons: true; modi: "drun,run"; font: "Inter 12"; }
 @theme "~/.config/rofi/theme.rasi"

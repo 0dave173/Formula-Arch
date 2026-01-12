@@ -1,18 +1,5 @@
 add_newline = false
 format = "$directory$git_branch$git_status$character"
-
 [directory]
-style = "bold #1E2327"
-format = "[$path]($style) "
-
-[git_branch]
-style = "#2E6F9A"
-format = "[$branch]($style) "
-
-[git_status]
-style = "#9C7A2E"
-format = "[$all_status$ahead_behind]($style) "
-
-[character]
-success_symbol = "[❯](#2F7D4D)"
-error_symbol = "[❯](#9D3B3B)"
+style="bold #1E2327"
+format="[$path]($style) "

@@ -1,0 +1,23 @@
+[Icon Theme]
+Name=Formula-Arch-Icons
+Comment=Formula-Arch starter icon theme (beige + light-blue)
+Inherits=Adwaita,hicolor
+Directories=scalable/apps,scalable/places,scalable/status
+
+[scalable/apps]
+Size=64
+Type=Scalable
+MinSize=16
+MaxSize=512
+
+[scalable/places]
+Size=64
+Type=Scalable
+MinSize=16
+MaxSize=512
+
+[scalable/status]
+Size=64
+Type=Scalable
+MinSize=16
+MaxSize=512

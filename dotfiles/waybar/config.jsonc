@@ -2,9 +2,14 @@
   "layer": "top",
   "position": "top",
   "height": 34,
+  "spacing": 8,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "network", "battery"],
-
-  "clock": { "format": "{:%a %d %b  %H:%M}" }
+  "modules-right": ["pulseaudio", "network", "battery", "custom/racecontrol"],
+  "clock": { "format": "{:%a %d %b  %H:%M}" },
+  "custom/racecontrol": {
+    "format": "RC",
+    "tooltip": "RaceControl AI (SUPER+A)",
+    "on-click": "~/.config/rofi/scripts/racecontrol-ai.sh"
+  }
 }

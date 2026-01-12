@@ -1,0 +1,42 @@
+# Maintainer: Formula-Arch
+
+pkgname=formula-arch
+pkgver=0.3.0
+pkgrel=1
+pkgdesc="Formula-Arch: beige/light-blue F1-inspired theme pack for Hyprland/Wayland"
+arch=('any')
+license=('MIT')
+depends=('hyprland' 'waybar' 'rofi' 'kitty' 'mako')
+optdepends=(
+  'swww: wallpaper daemon (Wayland)'
+  'grim: screenshots'
+  'slurp: region selection'
+  'wl-clipboard: clipboard support'
+  'starship: prompt'
+  'ollama: local AI backend'
+  'ttf-jetbrains-mono: recommended terminal font'
+  'ttf-inter: recommended UI font'
+)
+install=formula-arch.install
+
+# This PKGBUILD is intended to be run from the packaging/ folder.
+# It packages the whole repository into /usr/share/formula-arch.
+
+source=()
+sha256sums=()
+
+package() {
+  install -d "${pkgdir}/usr/share/formula-arch"
+  cp -a "${srcdir}/../"* "${pkgdir}/usr/share/formula-arch"
+
+  # Don't ship packaging into the payload
+  rm -rf "${pkgdir}/usr/share/formula-arch/packaging"
+
+  # Ensure scripts are executable
+  chmod +x "${pkgdir}/usr/share/formula-arch/scripts/"*.sh || true
+  chmod +x "${pkgdir}/usr/share/formula-arch/scripts/ai/"*.sh || true
+  chmod +x "${pkgdir}/usr/share/formula-arch/scripts/ai/providers/"*.sh || true
+  chmod +x "${pkgdir}/usr/share/formula-arch/dotfiles/rofi/scripts/"*.sh || true
+
+  install -Dm644 "${srcdir}/../LICENSE"     "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

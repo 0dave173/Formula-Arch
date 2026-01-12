@@ -1,0 +1,12 @@
+{
+  "bg": "#ECE6DA",
+  "fg": "#1E2327",
+  "muted": "#8A8A8A",
+  "accent": "#8CBED6",
+  "accent2": "#D6A15C",
+  "borderActive": "#8CBED6",
+  "borderInactive": "#CFC7BC",
+  "radius": 14,
+  "gap": 10,
+  "borderSize": 2
+}

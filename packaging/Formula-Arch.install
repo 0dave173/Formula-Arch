@@ -1,0 +1,9 @@
+post_install() {
+  echo "==> Formula-Arch installed to /usr/share/formula-arch"
+  echo "==> For applying to your user config:"
+  echo "    /usr/share/formula-arch/scripts/install.sh"
+}
+
+post_remove() {
+  echo "==> Formula-Arch removed."
+}

@@ -2,19 +2,16 @@
 
 A beige + light-blue Formula-1 inspired theme pack for Arch Linux (Hyprland / Wayland).
 
-## What you get
-- Hyprland (auto-tiling + smooth animations)
-- Waybar (beige bar, blue focus)
-- Rofi (launcher theme)
-- Kitty + Starship (terminal)
-- Mako (notifications)
-- Custom GTK headerbar window buttons (SVG)
-- "RaceControl" AI wrapper (local-first via Ollama)
-- Safe install/uninstall (backs up your current configs, uses symlinks)
+Ready-to-go:
+- Install backs up your current configs
+- Applies configs via symlinks
+- Copies wallpapers/icons to ~/.local/share
+- Reloads Hyprland + restarts Waybar/Mako
 
 ## Install
 ```bash
 cd formula-arch
+chmod +x scripts/*.sh scripts/ai/*.sh scripts/ai/providers/*.sh dotfiles/rofi/scripts/*.sh
 ./scripts/install.sh
 ```
 
@@ -23,16 +20,17 @@ cd formula-arch
 ./scripts/uninstall.sh
 ```
 
-## AI (RaceControl)
+## RaceControl AI
 ```bash
-echo "How do I fix wifi on Arch?" | ~/.local/share/formula-arch/bin/racecontrol.sh
+echo "fix wifi on arch" | ~/.local/share/formula-arch/bin/racecontrol.sh
 ```
 
-Environment variables:
-- `FORMULAARCH_AI_PROVIDER` (default: `ollama`)
-- `FORMULAARCH_AI_MODEL` (default: `llama3`)
-
-## Notes
-- Wallpapers live in `assets/wallpapers/` and get copied to:
-  `~/.local/share/formula-arch/wallpaper.png`
-- GTK button theming affects apps with GTK headerbars (not every app).
+## Keybinds
+- SUPER + Enter: kitty
+- SUPER + D: rofi launcher
+- SUPER + Shift + D: power menu
+- SUPER + A: RaceControl AI prompt
+- SUPER + Q: close window
+- SUPER + 1..5: switch workspace
+- SUPER + Shift + 1..5: move window
+- SUPER + S: screenshot region (grim+slurp+wl-copy)

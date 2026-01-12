@@ -1,29 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-
-backupRoot="${HOME}/.local/share/formula-arch/backups"
-stamp="$(date +"%Y%m%d_%H%M%S")"
-dest="${backupRoot}/${stamp}"
-
-mkdir -p "${dest}"
-
-toBackup=(
-  "${HOME}/.config/hypr"
-  "${HOME}/.config/waybar"
-  "${HOME}/.config/rofi"
-  "${HOME}/.config/mako"
-  "${HOME}/.config/kitty"
-  "${HOME}/.config/starship.toml"
-  "${HOME}/.config/gtk-3.0/gtk.css"
-  "${HOME}/.config/gtk-4.0/gtk.css"
-)
-
-echo "Backing up into: ${dest}"
-for p in "${toBackup[@]}"; do
-  if [[ -e "${p}" ]]; then
-    mkdir -p "${dest}/$(dirname "${p#"${HOME}/"}")"
-    cp -a "${p}" "${dest}/${p#"${HOME}/"}"
-  fi
-done
-
-echo "Backup done."
+root="$HOME/.local/share/formula-arch/backups"; stamp="$(date +%Y%m%d_%H%M%S)"; dest="$root/$stamp"; mkdir -p "$dest"
+for p in "$HOME/.config/hypr" "$HOME/.config/waybar" "$HOME/.config/rofi" "$HOME/.config/mako" "$HOME/.config/kitty"; do [[ -e "$p" ]] || continue; mkdir -p "$dest/$(dirname "${p#$HOME/}")"; cp -a "$p" "$dest/${p#$HOME/}"; done
+echo "Backup: $dest"
